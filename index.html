@@ -9,61 +9,61 @@
     </head>
 
 <body>
-    <div class="background-tint"></div>
-    <div id="background">
-		<div class='center'>
-            <div class='title'><span style='color:#00b7ff;'>db</span >Scripts</div>
-			<div style='width: 99%;'>
-			</div>
-			<div class='songstop'>Press<span style='color:#00b7ff;'> SPACE</span> to pause music</div>
-		</div>
+<div class="background-tint"></div>
+<div id="background">
+<div class='center'>
+<div class='title'><span style='color:#00b7ff;'>db</span >Scripts</div>
+<div style='width: 99%;'>
+</div>
+<div class='songstop'>Press<span style='color:#00b7ff;'> SPACE</span> to pause music</div>
+</div>
 
-        <div class="loadanim">
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-            <div class="obj"></div>
-        </div>
+<div class="loadanim">
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+</div>
 
-        <main>
-			<h1 id="title"></h1>
+<main>
+    <h1 id="title"></h1>
 
-			<p id="message"></p>
-			<p id="percent"><span id="progress-bar-value">0</span>%</p>
+    <p id="message"></p>
+    <p id="percent"><span id="progress-bar-value">0</span>%</p>
 
-			<progress id="progress" min="0" max="100" value="0"></progress>
-		</main>
+<progress id="progress" min="0" max="100" value="0"></progress>
+</main>
 
 
-        <audio id="audio_loading" autoplay loop>
-            <source src="music/loading.ogg" type="audio/ogg">
-        </audio>		
+<audio id="audio_loading" autoplay loop>
+    <source src="music/loading.ogg" type="audio/ogg">
+</audio>		
         
-        <script type='text/javascript'>
-            var audio = document.getElementById("audio_loading");
-            audio.volume = 0.1
-        </script>
+<script type='text/javascript'>
+    var audio = document.getElementById("audio_loading");
+    audio.volume = 0.1
+</script>
 
-        <script>
-            var player = document.getElementById('audio_loading');
-            player.volume = 0.1;
+    <script>
+         var player = document.getElementById('audio_loading');
+         player.volume = 0.1;
             window.addEventListener('keydown', function(e) {
-                if(e.keyCode == 32) {
-                    if(player.paused) {
-                       player.play();
-                 } else {
-                       player.pause();
-                  }
-                }
-          });
-        </script>
+         if(e.keyCode == 32) {
+         if(player.paused) {
+         player.play();
+         } else {
+            player.pause();
+           }
+        }
+    });
+</script>
 
-        <script src="config.js"></script>
-        <script src="assets/main.js"></script>
+<script src="config.js"></script>
+<script src="assets/main.js"></script>
 
 
 </body>
