@@ -1,0 +1,160 @@
+@font-face {
+	font-family: gravity;
+	src: url('assets/gravity.woff2');
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: #000000a8;
+    background-image: url(assets/gta610.jpg);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+    transform: scale(1.03);
+    transition: all 20s linear;
+    background-position: 0vh 0vh;
+    display: block;
+}
+
+.center {
+    width:50vh;
+    height:10vh;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-10vh 0 0 -25vh;								
+    text-align: center;
+    font-family: gravity;
+}
+
+.title {
+    color: #ffffff;
+    margin-top: -30vh;
+    font-size: 5.0em;
+    font-style: bold;
+    font-family: gravity;
+}
+
+.songstop {
+    color: #ffffff;
+    font-size: 1.0em;
+}
+
+.loadanim{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:4vh;
+    display:flex;
+    align-items:center
+}
+.obj{
+    width:1vh;
+    height:2vh;
+    background:#fff;
+    margin:0 1vh;
+    border-radius:3vh;
+    animation:loading .8s infinite;
+}
+    .obj:nth-child(2) {
+        animation-delay: .1s;
+    }
+    .obj:nth-child(3) {
+        animation-delay: .2s;
+    }
+    .obj:nth-child(4) {
+        animation-delay: .3s;
+    }
+    .obj:nth-child(5) {
+        animation-delay: .4s;
+    }
+    .obj:nth-child(6) {
+        animation-delay: .5s;
+    }
+    .obj:nth-child(7) {
+        animation-delay: .6s;
+    }
+    .obj:nth-child(8) {
+        animation-delay: .7s;
+    }
+@keyframes loading{
+    0%{
+        height:0;
+    }
+    50%{
+        height:10vh;
+    }
+    100%{
+        height:0;
+    }
+}
+
+
+.sb {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 1vh 1vh;
+    opacity: 0.4;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 5vh;
+    margin-top: 3vh;
+    border-radius:2vh;
+  }
+  
+  .sb:hover {opacity: 1}
+
+main {
+	width: 60vw;
+	margin: 0 auto;
+	padding: 15vh 0;
+    margin-top: 3vh;
+}
+
+#title {
+	padding-bottom: 10vh;
+	font-size: 20vw;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+    font-family: gravity;
+}
+
+#message {
+	display: inline-block;
+	transition: opacity 0.25s;
+    color: white;
+    font-family: gravity;
+}
+
+#percent {
+	float: right;
+    font-family: gravity;
+    font-family: gravity;
+    color: white;
+}
+
+progress[value] {
+	width: 100%;
+	height: 2rem;
+	-webkit-appearance: none;
+}
+progress[value]::-webkit-progress-bar {
+	background-color: rgba(51, 51, 51, 0.459);
+	border-radius: 1rem;
+}
+progress[value]::-webkit-progress-value {
+    transition: width 0.5s;
+}
+progress::-webkit-progress-value {
+	background: #00b7ff;
+	border-radius: 1rem;
+}
