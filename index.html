@@ -39,27 +39,30 @@
 </main>
 
 
-<audio id="audio_loading" autoplay loop>
-    <source src="music/loading.ogg" type="audio/ogg">
-</audio>		
-        
-<script type='text/javascript'>
-    var audio = document.getElementById("audio_loading");
-    audio.volume = 0.1
-</script>
+<audio id="audio_loading" src="music/song.mp3" autoplay hidden="true" loop="true"/>
+<script>
 
-    <script>
-         var player = document.getElementById('audio_loading');
-         player.volume = 0.1;
-            window.addEventListener('keydown', function(e) {
-         if(e.keyCode == 32) {
-         if(player.paused) {
-         player.play();
-         } else {
-            player.pause();
-           }
+var play = true;
+var myAudio = document.getElementById("audio_loading");
+
+myAudio.volume = 0.5;
+
+function onKeyDown(event) {
+        switch (event.keyCode) {
+            case 32: //SpaceBar                    
+                if (play) {
+                    myAudio.pause();
+                    play = false;
+                } else {
+                    myAudio.play();
+                    play = true;
+                }
+                break;
         }
-    });
+  return false;
+}
+
+window.addEventListener("keydown", onKeyDown, false);
 </script>
 
 <script src="config.js"></script>
